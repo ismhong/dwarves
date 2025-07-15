@@ -2364,7 +2364,7 @@ static int btf_encoder__encode_cu_variables(struct btf_encoder *encoder)
 		}
 		if (addr > UINT32_MAX) {
 			if (encoder->verbose)
-				fprintf(stderr, "Ignoring variable '%s' - its offset %zu doesn't fit in a u32\n",
+				fprintf(stderr, "Ignoring variable '%s' - its offset %" PRIu64 " doesn't fit in a u32\n",
 					name, addr);
 			continue;
 		}
